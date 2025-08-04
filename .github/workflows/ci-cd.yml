@@ -1,3 +1,7 @@
+# Docker CI/CD Pipeline (Optional - for containerized deployment)
+# This workflow is disabled by default since we're using GitHub Pages
+# To enable: remove the "if: false" condition and set up Docker Hub secrets
+
 name: Frontend CI/CD Pipeline
 
 on:
@@ -9,7 +13,7 @@ on:
 jobs:
   frontend-build:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: false  # Disabled - remove this line to enable Docker builds
     
     steps:
     - name: Checkout code
@@ -23,7 +27,7 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-        username: apurva1025
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     
     - name: Set Docker tag
@@ -41,5 +45,5 @@ jobs:
         context: ./frontend
         file: ./frontend/Dockerfile
         push: true
-        tags: apurva1025/portfolio-frontend:${{ steps.set-tag.outputs.TAG }}   
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-portfolio:${{ steps.set-tag.outputs.TAG }}   
 
