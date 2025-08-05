@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { 
   FaJenkins, FaGithub, FaDocker, FaAws, 
-  FaTerminal, FaCode, FaLock, FaDatabase 
+  FaTerminal, FaCode, FaLock 
 } from 'react-icons/fa';
-import { SiKubernetes, SiTerraform, SiMicrosoftazure, SiPrometheus, SiGrafana, SiRedis, SiGooglecloud } from 'react-icons/si';
+import { SiKubernetes, SiTerraform, SiMicrosoftazure, SiGrafana, SiRedis, SiGooglecloud } from 'react-icons/si';
 
 const Skills = () => {
   React.useEffect(() => {
