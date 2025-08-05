@@ -2,7 +2,11 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { 
   FaJenkins, FaGithub, FaDocker, FaAws, 
+<<<<<<< Updated upstream
   FaTerminal, FaCode, FaLock 
+=======
+  FaTerminal, FaCode, FaLock
+>>>>>>> Stashed changes
 } from 'react-icons/fa';
 import { SiKubernetes, SiTerraform, SiMicrosoftazure, SiGrafana, SiRedis, SiGooglecloud } from 'react-icons/si';
 
