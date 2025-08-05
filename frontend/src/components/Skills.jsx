@@ -33,7 +33,7 @@ const Skills = () => {
       skills: [
         { name: "Microsoft Azure", icon: <SiMicrosoftazure className="skill-icon text-primary" /> },
         { name: "AWS", icon: <FaAws className="skill-icon text-warning" /> },
-        { name: "Azure DevOps", icon: <SiMicrosoftazure className="skill-icon text-info" /> }
+        { name: "GCP", icon: <SiGooglecloud className="skill-icon text-info" /> }
       ]
     },
     {
