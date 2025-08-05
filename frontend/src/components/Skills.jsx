@@ -2,11 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { 
   FaJenkins, FaGithub, FaDocker, FaAws, 
-<<<<<<< Updated upstream
-  FaTerminal, FaCode, FaLock 
-=======
   FaTerminal, FaCode, FaLock
->>>>>>> Stashed changes
 } from 'react-icons/fa';
 import { SiKubernetes, SiTerraform, SiMicrosoftazure, SiGrafana, SiRedis, SiGooglecloud } from 'react-icons/si';
 
@@ -37,7 +33,7 @@ const Skills = () => {
       skills: [
         { name: "Microsoft Azure", icon: <SiMicrosoftazure className="skill-icon text-primary" /> },
         { name: "AWS", icon: <FaAws className="skill-icon text-warning" /> },
-        { name: "Google Cloud Platform", icon: <SiGooglecloud className="skill-icon text-info" /> }
+        { name: "Azure DevOps", icon: <SiMicrosoftazure className="skill-icon text-info" /> }
       ]
     },
     {
@@ -69,7 +65,7 @@ const Skills = () => {
       skills: [
         { name: "Azure Data Factory", icon: <SiMicrosoftazure className="skill-icon text-primary" /> },
         { name: "Synapse Analytics", icon: <SiMicrosoftazure className="skill-icon text-info" /> },
-        { name: "Azure Databricks", icon: <SiMicrosoftazure className="skill-icon text-warning" /> }
+        { name: "Power BI", icon: <SiMicrosoftazure className="skill-icon text-warning" /> }
       ]
     },
     {
@@ -77,7 +73,7 @@ const Skills = () => {
       skills: [
         { name: "Grafana", icon: <SiGrafana className="skill-icon text-warning" /> },
         { name: "Azure Monitor", icon: <SiMicrosoftazure className="skill-icon text-primary" /> },
-        { name: "Power BI", icon: <SiMicrosoftazure className="skill-icon text-info" /> }
+        { name: "App Insights", icon: <SiMicrosoftazure className="skill-icon text-info" /> }
       ]
     },
     {
@@ -85,7 +81,7 @@ const Skills = () => {
       skills: [
         { name: "Azure Policy", icon: <FaLock className="skill-icon text-warning" /> },
         { name: "Azure Key Vault", icon: <FaLock className="skill-icon text-primary" /> },
-        { name: "Microsoft Purview", icon: <FaLock className="skill-icon text-info" /> }
+        { name: "RBAC", icon: <FaLock className="skill-icon text-info" /> }
       ]
     },
     {
@@ -93,7 +89,7 @@ const Skills = () => {
       skills: [
         { name: "YAML", icon: <FaCode className="skill-icon text-primary" /> },
         { name: "Bash/PowerShell", icon: <FaTerminal className="skill-icon text-secondary" /> },
-        { name: "JSON/REST APIs", icon: <FaCode className="skill-icon text-dark" /> }
+        { name: "Git & GitHub", icon: <FaGithub className="skill-icon text-dark" /> }
       ]
     }
   ];
