@@ -100,7 +100,7 @@ const Home = () => {
                 <Button href="#contact" variant="primary" size="lg" className="cta-button glow-button me-3">
                   Contact Me
                 </Button>
-                <Button href="#resume" variant={isDarkMode ? "outline-light" : "outline-dark"} size="lg" className="cta-button">
+                <Button href="#resume" variant="primary" size="lg" className="cta-button glow-button">
                   View Resume
                 </Button>
               </div>

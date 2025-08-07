@@ -1,39 +1,8 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Card, Alert } from 'react-bootstrap';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendar } from 'react-icons/fa';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertVariant, setAlertVariant] = useState('success');
-  const [alertMessage, setAlertMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Always show success message
-    setAlertVariant('success');
-    setAlertMessage('Message Sent!');
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 3000);
-  };
-
   return (
     <Container className="section">
       <Row>
@@ -46,126 +15,58 @@ const Contact = () => {
       </Row>
 
       <Row>
-        <Col lg={5} className="mb-4 mb-lg-0">
-          <Card className="border-0 shadow-sm h-100">
-            <Card.Body className="p-4">
-              <h3 className="mb-4">Contact Information</h3>
-
-              <div className="d-flex align-items-center mb-4">
-                <FaEnvelope className="me-3 text-primary" size={24} />
-                <div>
-                  <h5 className="mb-0">Email</h5>
-                  <p className="mb-0">
-                    <a href="mailto:abilash.work21@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      abilash.work21@gmail.com
-                    </a>
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="d-flex align-items-center mb-4">
-                <FaPhone className="me-3 text-primary" size={24} />
-                <div>
-                  <h5 className="mb-0">Phone</h5>
-                  <p className="mb-0">
-                    <a href="tel:+919566883316" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      +91-9566883316
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="d-flex align-items-center mb-4">
-                <FaMapMarkerAlt className="me-3 text-primary" size={24} />
-                <div>
-                  <h5 className="mb-0">Location</h5>
-                  <p className="mb-0">Coimbatore, India</p>
-                </div>
-              </div>
-
-              <div className="d-flex align-items-center mb-4">
-                <FaLinkedin className="me-3 text-primary" size={24} />
-                <div>
-                  <h5 className="mb-0">LinkedIn</h5>
-                  <p className="mb-0">
-                    <a href="https://www.linkedin.com/in/abilash-s-2aba3516b/" target="_blank" rel="noopener noreferrer">
-                      linkedin.com/in/abilash-s-2aba3516b/
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="d-flex align-items-center">
-                <FaGithub className="me-3 text-primary" size={24} />
-                <div>
-                  <h5 className="mb-0">GitHub</h5>
-                  <p className="mb-0">
-                    <a href="https://github.com/Abilash21z" target="_blank" rel="noopener noreferrer">
-                      github.com/Abilash21z
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col lg={7}>
+        <Col xs={12}>
           <Card className="border-0 shadow-sm">
             <Card.Body className="p-4">
-              <h3 className="mb-4">Send a Message</h3>
-
-              {showAlert && (
-                <Alert variant={alertVariant} onClose={() => setShowAlert(false)} dismissible>
-                  {alertMessage}
-                </Alert>
-              )}
-
-              <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </Form.Group>
-
-                <Form.Group className="mb-4">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={5}
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                </Form.Group>
-
-                <Button 
-                  variant="primary" 
-                  type="submit" 
-                  size="lg" 
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </Form>
+              <Row className="text-center">
+                <Col md={3} className="mb-3 mb-md-0">
+                  <div className="d-flex flex-column align-items-center">
+                    <FaEnvelope className="mb-2 text-primary" size={32} />
+                    <h6 className="mb-1">Email</h6>
+                    <p className="mb-0 small">
+                      <a href="mailto:abilash.work21@gmail.com" className="text-decoration-none">
+                        abilash.work21@gmail.com
+                      </a>
+                    </p>
+                  </div>
+                </Col>
+                
+                <Col md={3} className="mb-3 mb-md-0">
+                  <div className="d-flex flex-column align-items-center">
+                    <FaLinkedin className="mb-2 text-primary" size={32} />
+                    <h6 className="mb-1">LinkedIn</h6>
+                    <p className="mb-0 small">
+                      <a href="https://www.linkedin.com/in/abilash-s-2aba3516b/" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                        Connect with me
+                      </a>
+                    </p>
+                  </div>
+                </Col>
+                
+                <Col md={3} className="mb-3 mb-md-0">
+                  <div className="d-flex flex-column align-items-center">
+                    <FaGithub className="mb-2 text-primary" size={32} />
+                    <h6 className="mb-1">GitHub</h6>
+                    <p className="mb-0 small">
+                      <a href="https://github.com/Abilash21z" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                        View my projects
+                      </a>
+                    </p>
+                  </div>
+                </Col>
+                
+                <Col md={3}>
+                  <div className="d-flex flex-column align-items-center">
+                    <FaMapMarkerAlt className="mb-2 text-primary" size={32} />
+                    <h6 className="mb-1">Location</h6>
+                    <p className="mb-0 small">
+                      <a href="https://www.google.com/maps/place/Coimbatore,+Tamil+Nadu,+India" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                        Coimbatore, India
+                      </a>
+                    </p>
+                  </div>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Col>
