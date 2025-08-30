@@ -60,7 +60,7 @@ const SkillCategoryCard = styled(Card)`
   
   .card-body {
     height: 210px;
-    overflow-y: auto;
+    overflow: hidden;
     
     @media (max-width: 768px) {
       height: 190px;
